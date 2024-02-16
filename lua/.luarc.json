@@ -1,0 +1,17 @@
+{
+    "diagnostics.disable": [
+        "unused-local",
+        "missing-fields"
+    ],
+    "diagnostics.globals": [
+        "vim",
+        "spec",
+        "execution_message",
+        "on_attach",
+        "util",
+        "default_direction",
+        "Util",
+        "copilot",
+        "keys"
+    ]
+}
