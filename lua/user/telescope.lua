@@ -1,4 +1,4 @@
--- telescope.lua
+-- -- telescope.lua
 local M = {
 	{
 		"nvim-telescope/telescope-ui-select.nvim",
@@ -19,6 +19,9 @@ local M = {
 					["aerial"] = {
 						require("telescope.themes").get_dropdown({}),
 					},
+					["colorscheme"] = {
+						require("telescope.themes").get_dropdown({}),
+					},
 				},
 			})
 			local builtin = require("telescope.builtin")
@@ -28,9 +31,10 @@ local M = {
 			keymap("n", "<leader>fg", builtin.live_grep, {})
 			keymap("n", "<leader>fb", builtin.buffers, {})
 			keymap("n", "<leader>ch", builtin.colorscheme, {})
-			keymap("n", "<leader>a", require("telescope").extensions.aerial.aerial, {})
+			-- require("telescope").extensions.colorscheme.colorscheme()
 			require("telescope").load_extension("ui-select")
 			require("telescope").load_extension("aerial")
+			-- require("telescope").load_extension("colorscheme")
 		end,
 	},
 }
