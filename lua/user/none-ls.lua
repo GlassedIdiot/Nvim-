@@ -30,6 +30,7 @@ function M.config()
 			formatting.stylua,
 			formatting.prettier,
 
+			formatting.clang_format,
 			--go-nullLs-settigs---------------------
 			formatting.gofumpt,
 			formatting.golines,
