@@ -12,6 +12,7 @@
         "default_direction",
         "Util",
         "copilot",
-        "keys"
+        "keys",
+        "opts"
     ]
 }
