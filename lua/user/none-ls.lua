@@ -38,7 +38,7 @@ function M.config()
 			diagnostics.golangci_lint,
 			------------------------
 			formatting.prettier.with({
-				extra_filetypes = { "toml" },
+				extra_filetypes = { "toml" , "nix"},
 				-- extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" },
 			}),
 			-- null_ls.builtins.diagnostics.eslint,

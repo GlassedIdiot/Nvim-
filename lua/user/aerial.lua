@@ -12,6 +12,7 @@ function M.config()
 			local keymap = vim.keymap.set
 			keymap("n", "{", "<cmd>AerialPrev<CR>", { buffer = bufnr })
 			keymap("n", "}", "<cmd>AerialNext<CR>", { buffer = bufnr })
+			keymap("n", "<S-f>", "<cmd>AerialOpen float<CR>", { buffer = bufnr })
 		end,
 
 		layout = {
@@ -21,6 +22,7 @@ function M.config()
 			default_direction = "prefer_left",
 		},
 		float = {
+      border = "rounded",
 			max_width = { 25, 0.8 },
 			width = 20,
 			default_direction = "prefer_right",

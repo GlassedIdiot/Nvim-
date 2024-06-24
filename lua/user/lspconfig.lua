@@ -22,11 +22,11 @@ local function lsp_keymaps(bufnr)
 end
 
 M.on_attach = function(client, bufnr)
-	lsp_keymaps(bufnr)
+  lsp_keymaps(bufnr)
 
-	if client.supports_method("textDocument/inlayHint") then
-		vim.lsp.inlayHint.enable(bufnr, true)
-	end
+	-- if client.supports_method("textDocument/inlayHint") then
+	-- 	vim.lsp.inlayHint.enable(bufnr, true)
+	-- end
 end
 
 function M.common_capabilities()
@@ -58,6 +58,7 @@ function M.config()
 		"gopls",
 		"zls",
 		"clangd",
+    "nil_ls"
 		-- "cssls",
 		--"html",
 		--"tsserver",
@@ -110,7 +111,8 @@ function M.config()
 		local opts = {
 			on_attach = M.on_attach,
 			capabilities = M.common_capabilities(),
-		}
+		  inlay_hints = {enabled = true},
+    }
 
 		local require_ok, settings = pcall(require, "user.lspsettings." .. server)
 		if require_ok then
